@@ -1,0 +1,25 @@
+# Dockerfile.dashboard
+
+# Usamos una imagen de Python simple
+FROM python:3.9-slim
+
+# Establecemos el directorio de trabajo
+WORKDIR /app
+
+# Copiamos e instalamos los requisitos del dashboard
+COPY requirements-dashboard.txt .
+RUN pip install --no-cache-dir -r requirements-dashboard.txt
+
+# Copiamos el resto de los archivos
+COPY . .
+
+# --- ¡CHIVATO DE DEPURACIÓN! ---
+# Esta línea imprimirá el contenido del archivo en la terminal durante la construcción
+RUN cat dashboard.py
+# --------------------------------
+
+# Exponemos el puerto por defecto de Streamlit (8501)
+EXPOSE 8501
+
+# El comando para iniciar la aplicación de Streamlit
+CMD ["streamlit", "run", "dashboard.py"]
