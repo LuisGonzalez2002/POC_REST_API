@@ -2,9 +2,9 @@
 
 https://github.com/user-attachments/assets/fb436424-737e-4714-8ee0-aa793ed09d03
 
-# Allianz REST API — POC
+# REST API — POC
 
-This project started as a Proof of Concept for **Allianz**. The goal was to build a **REST API** for customer-like data and implement features that make **automated, simple data extraction** possible (e.g., filtering by `id` and other query parameters). For privacy reasons, the POC uses **sample (Formula 1) data** and contains **no real customer data**.
+This project started as a Proof of Concept . The goal was to build a **REST API** for customer-like data and implement features that make **automated, simple data extraction** possible (e.g., filtering by `id` and other query parameters). For privacy reasons, the POC uses **sample (Formula 1) data** and contains **no real customer data**.
 
 ## What this POC includes
 - **REST API** with clear resources and predictable routes.
@@ -55,4 +55,4 @@ This project started as a Proof of Concept for **Allianz**. The goal was to buil
 ### Run with Docker
 ```bash
 # build & run (adjust names/ports as needed)
-docker build -t allianz-api-poc .
+docker build -t api-poc .
